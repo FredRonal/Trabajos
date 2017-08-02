@@ -1,0 +1,309 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #D4D5D6; /*Color algo  oscuro y xvr: #323A46*/
+	font-family: Arial;
+}
+
+/*******************Diseno de todo el contenedor******************/
+
+.contenedor{
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+/***********Diseño de Titulo **************/
+
+h1{
+	position: absolute;
+	top: 15px;
+	left: 90px;
+	color: #fff;
+	font-size: 23px;
+	animation: bienvenido 5s infinite ease-in;
+}
+h2{
+	display: none;
+}
+@keyframes bienvenido{
+	90%{
+		left: 150px;
+	}
+}
+
+/************ Logo ****************/
+.logo img{
+	position: absolute;
+	width: 60px;
+	height: auto;
+	top: 1px;
+	left: 20px;
+}
+/****************** Diseño del Menú *************/
+
+header{
+	position: fixed;
+	width: 100%;
+	height: 60px;
+	max-width: 1200px;
+	background: #4F5051;/*Color rojo:  #EB4A33*/
+	margin: 0;
+	z-index: 100;
+}
+
+#btn-menu{
+	display: none;/*desaparecer*/
+}
+
+header label{
+	position: absolute;
+	display: none;
+	width: 30px;
+	height: 30px;
+	top: 15px;
+	left: 88%;
+	border-right: 1px solid #fff;
+}
+
+header label:hover {
+	cursor: pointer;
+	background: rgba(0,0,0,0.3);
+
+}
+
+.menu ul{
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	z-index: 100;
+	justify-content: flex-end; /*para el menu se coloque a la derecha*/
+	/*justify-content: center; para centrar*/
+}
+.menu li{
+	/*flex-grow: 1; para que todos os li ocupen toda la pantallla*/
+	border-right: 1px solid #fff; 
+}
+
+.menu li:hover{
+	background: rgba(0,0,0,0.3);
+}
+
+.menu li a{
+	display: block;
+	padding: 15px 20px;/*15px hacia arriba y 20px a la izquierda*/
+	color: #fff;
+	text-decoration: none;
+}
+/************Dejamos un espacio para el menu*******************/
+.libre{
+	width: 100%;
+	height: 60px;
+	background: #798084;
+}
+/******************* Diseño Para el Banner***********************/
+.content-banner{
+	width: 100%;
+	height: 450px;
+	border: 3px solid gray;
+	margin: auto;
+	
+
+	background-size: 100% 100%;
+	animation: banner 10s infinite;
+}
+
+@keyframes banner{
+	0%,30%{
+		background-image: url(img1/slider1.jpg);
+		opacity: 1;
+	}
+	31%,34%{
+		opacity: 0.1;
+	}
+	35%,65%{
+		background-image: url(img1/slider2.jpg);
+		opacity: 1;
+	}
+	66%,69%{
+		opacity: .1;
+	}
+	70%,100%{
+		background-image: url(img1/slider3.jpg);
+		opacity: 1;
+	}
+}
+
+/****Banner 2 ******/
+.slider{
+	width: 100%;
+	height: 220px;
+	border: 3px solid gray;
+	margin: auto;
+	
+
+	background-size: 100% 100%;
+	animation: banner2 10s infinite;
+}
+
+@keyframes banner2{
+	0%,20%{
+		background-image: url(img1/5.jpg);
+		opacity: 1;
+	}
+	21%,24%{
+		opacity: 0.1;
+	}
+	25%,45%{
+		background-image: url(img1/adobe.jpg);
+		opacity: 1;
+	}
+	46%,49%{
+		opacity: .1;
+	}
+	50%,70%{
+		background-image: url(img1/sli1.jpg);
+		opacity: 1;
+	}
+	71%,74%{
+		opacity: .1;
+	}
+	75%,100%{
+		background-image: url(img1/adob1.jpg);
+		opacity: 1;
+	}
+}
+/******************Diseño del contenido del header******************/
+
+
+.main div{
+	width: 35%;
+	background: #fff;
+	padding: 20px;
+	float: left;
+	box-sizing: border-box;
+}
+
+.main div img{
+	width: 100%;
+	height: auto;
+	padding: 3px;
+}
+.main div img:hover{
+	cursor: pointer;
+	animation: efecto 1.5s forwards ease-in;
+}
+@keyframes efecto {
+	50%{
+		transform: scale(1.2);
+	}
+}
+/************* Diseñamos el contenido *****************/
+section h3{
+	font-size: 30px;
+	color: #3E719B;
+}
+section h4{
+	font-size: 20px;
+	color: #1B6B20;
+}
+aside h5{
+	font-size: 18px;
+	color: #000;
+}
+
+/***********************************/
+
+
+aside{
+	width: 30%;
+	padding: 20px;
+	box-sizing: border-box;
+	background: #B25F0D;
+	float: left;
+}
+
+footer{
+	clear: both;
+	float: left;
+	margin-top: 20px;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 20px;
+	color: #fff;
+	background: #000;
+}
+
+
+
+/****************** Diseño para hacer Responsive ******************/
+/* @media screen: al llega a cierto tamaño de la pantalla
+                  va a ocurrir algo */
+
+/*Lectura: cuando el tamaño de la pantalla tenga y (tamaño
+           que llega para hacer la animacion "maximo-ancho")*/
+/*@media screen and (max-width: 800px){
+	.main{
+		width: 100%;
+	}
+	section {
+		width: 100%;
+	}
+
+}*/
+
+
+@media (max-width:800px){
+
+	header label{
+		display: block;
+	}
+	.menu {
+		position: absolute;
+		background: #4F5051;
+		right: 5%;
+		top: 102%;
+		margin-right: -100%;
+		transition: all 0.5s;
+		z-index: 999;
+	}
+	.menu ul{
+		flex-direction: column;
+	}
+	.menu li{
+		border-top: 1px solid #fff;
+	}
+	#btn-menu:checked ~ .menu{
+		margin: 0;
+	}
+	h1{
+	display: none;
+	}
+	h2{
+		margin: 10px;
+		display: block;
+		text-align: center;
+		color: #fff;
+	}
+	aside{
+		width: 100%;
+	}
+	section{
+		width: 100%;
+	}
+	.content-banner{
+		width: 100%;
+		height: 200px;
+	}
+	section .cantaro2{
+		display: none;
+	}
+	section .cantaro1{
+		width: 100%;
+	}
+	
+}
